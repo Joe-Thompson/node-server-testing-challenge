@@ -18,8 +18,8 @@ async function update(id, changes) {
     return findById(id)
 }
 
-function remove(id) {
-    return db('games').where('id', id).del();
+async function remove(id) {
+    await db('games').where('id', id).del();
 }
 
 function getAll() {
